@@ -1,0 +1,538 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.headerbar {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "merriweather", sans-serif;
+  box-shadow: #000 0px 0px 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.headerbar_title {
+  font-style: italic;
+  font-size: 32px;
+}
+
+.headerbar_title > span {
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.headerbar > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+main {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.input-section {
+  width: 53vw;
+  box-shadow: rgb(120, 120, 120) 0px 0px 10px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.bookshelf-section {
+  width: 40vw;
+  box-shadow: rgb(120, 120, 120) 0px 0px 10px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.title-container {
+  font-size: 28px;
+  text-align: center;
+  padding: 16px 0;
+  color: #000;
+  font-weight: bold;
+  border-bottom: #000 solid 1px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.input-form label {
+  font-size: 20px;
+}
+
+.input-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 0;
+  font-size: 20px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+input {
+  padding: 5px;
+  border: #c6c6c6 solid 1px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+  border: #000 solid 1px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+}
+
+.input-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+#bookFormSubmit {
+  padding: 8px;
+  align-self: center;
+  align-items: center;
+}
+
+#bookFormSubmit > span {
+  font-weight: bold;
+}
+
+#incompleteBookList > div > h3,
+#completeBookList > div > h3 {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+#incompleteBookList > div > p,
+#completeBookList > div > p {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+#incompleteBookList > div > button,
+#completeBookList > div > button {
+  display: inline-block;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.complete-book {
+  background-color: #00a65a;
+  width: fit-content;
+  border-color: #00a65a;
+}
+
+.delete-book {
+  background-color: rgb(255, 36, 36);
+  width: fit-content;
+  border-color: rgb(255, 36, 36);
+}
+
+.edit-book {
+  background-color: #f39c12;
+  width: fit-content;
+  border-color: #f39c12;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0f00b0;
+  box-shadow: 0 0 0 0.5px rgba(16, 203, 255, 0.589);
+}
+
+#searchSubmit {
+  border: #fff solid 1px;
+}
+
+footer {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  box-shadow: rgb(120, 120, 120) 0px 0px 10px;
+  color: #fff;
+}
+
+.item {
+  border: #c6c6c6 solid 1px;
+  border-radius: 10px;
+  margin: 16px 0;
+  padding: 16px;
+}
+
+.shadow {
+  box-shadow: rgb(120, 120, 120) 0px 0px 2px;
+}
+
+/* Bagaian Responsive */
+/* Media Query for 600px */
+@media screen and (max-width: 600px) {
+  .headerbar {
+    text-align: center;
+  }
+
+  .headerbar_title {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar_title span {
+    font-size: 6px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar > form {
+    font-size: 6px;
+  }
+
+  .headerbar > form input,
+  .headerbar > form button {
+    font-size: 6px;
+    padding: 2px;
+    width: 80%;
+    text-align: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .input-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .bookshelf-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .title-container {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
+  .input-form {
+    padding: 10px 0;
+  }
+
+  .input-form label {
+    font-size: 16px;
+  }
+
+  .input-checkbox {
+    font-size: 16px;
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  #bookFormSubmit {
+    font-size: 14px;
+    width: 80%;
+    padding: 6px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  #incompleteBookList > div > h3,
+  #completeBookList > div > h3 {
+    font-size: 16px;
+  }
+
+  #incompleteBookList > div > p,
+  #completeBookList > div > p {
+    font-size: 14px;
+  }
+
+  #incompleteBookList > div > button,
+  #completeBookList > div > button {
+    font-size: 14px;
+    padding: 6px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* Media Query for 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .headerbar {
+    text-align: center;
+  }
+
+  .headerbar_title {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar_title span {
+    font-size: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar > form {
+    font-size: 10px;
+  }
+
+  .headerbar > form input,
+  .headerbar > form button {
+    font-size: 10px;
+    padding: 2px;
+    width: 80%;
+    text-align: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .input-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .bookshelf-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .title-container {
+    padding: 10px 0;
+    font-size: 30px;
+  }
+
+  .input-form {
+    padding: 10px 0;
+  }
+
+  .input-form label {
+    font-size: 20px;
+  }
+
+  .input-checkbox {
+    font-size: 20px;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  #bookFormSubmit {
+    font-size: 16px;
+    width: 80%;
+    padding: 6px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  #incompleteBookList > div > h3,
+  #completeBookList > div > h3 {
+    font-size: 20px;
+  }
+
+  #incompleteBookList > div > p,
+  #completeBookList > div > p {
+    font-size: 16px;
+  }
+
+  #incompleteBookList > div > button,
+  #completeBookList > div > button {
+    font-size: 16px;
+    padding: 6px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* Media Query for 1142px */
+@media screen and (min-width: 1025px) and (max-width: 1142px) {
+  .headerbar {
+    text-align: center;
+  }
+
+  .headerbar_title {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar_title span {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+  }
+
+  .headerbar > form {
+    font-size: 12px;
+  }
+
+  .headerbar > form input,
+  .headerbar > form button {
+    font-size: 12px;
+    padding: 2px;
+    width: 80%;
+    text-align: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .input-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .bookshelf-section {
+    padding: 10px;
+    width: 95vw;
+    max-width: none;
+  }
+
+  .title-container {
+    padding: 10px 0;
+    font-size: 40px;
+  }
+
+  .input-form {
+    padding: 10px 0;
+  }
+
+  .input-form label {
+    font-size: 24px;
+  }
+
+  .input-checkbox {
+    font-size: 24px;
+  }
+
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  #bookFormSubmit {
+    font-size: 18px;
+    width: 80%;
+    padding: 6px;
+  }
+
+  .item {
+    padding: 10px;
+  }
+
+  #incompleteBookList > div > h3,
+  #completeBookList > div > h3 {
+    font-size: 24px;
+  }
+
+  #incompleteBookList > div > p,
+  #completeBookList > div > p {
+    font-size: 18px;
+  }
+
+  #incompleteBookList > div > button,
+  #completeBookList > div > button {
+    font-size: 18px;
+    padding: 6px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 6px;
+  }
+}

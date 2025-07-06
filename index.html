@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf App by Jenal Mustaqim</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="headerbar">
+    <h1 class="headerbar_title">Bookshelf App <span>by Jenal Mustaqim</span></h1>
+    <form id="searchBook" data-testid="searchBookForm">
+      <label for="searchBookTitle">Judul</label>
+      <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="Cari Buku..." />
+      <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+        Cari
+      </button>
+    </form>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <div class="title-container">
+        <h2>Tambah Buku Baru</h2>
+      </div>
+      <form id="bookForm" data-testid="bookForm">
+        <div class="input-form">
+          <label for="bookFormTitle">Judul</label>
+          <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+        </div>
+        <div class="input-form">
+          <label for="bookFormAuthor">Penulis</label>
+          <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+        </div>
+        <div class="input-form">
+          <label for="bookFormYear">Tahun</label>
+          <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+        </div>
+        <div class="input-checkbox">
+          <label for="bookFormIsComplete">Selesai dibaca</label>
+          <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+        </div>
+        <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+          Masukkan Buku ke rak <span id="submitBookButton">Belum selesai dibaca</span>
+        </button>
+      </form>
+    </section>
+
+    <section class="bookshelf-section">
+      <div class="title-container">
+        <h2>Belum selesai dibaca</h2>
+      </div>
+      <div id="incompleteBookList" data-testid="incompleteBookList">
+        <!-- Data buku dilakukan secara dinamis dengan JavaScript -->
+      </div>
+    </section>
+
+    <section class="bookshelf-section">
+      <div class="title-container">
+        <h2>Selesai dibaca</h2>
+      </div>
+      <div id="completeBookList" data-testid="completeBookList">
+        <!-- Data buku dilakukan secara dinamis dengan JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js" type="text/javascript"></script>
+
+  <footer>&copy; 2025, jenalmustaqim</footer>
+</body>
+
+</html>
