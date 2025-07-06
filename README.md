@@ -12,4 +12,3 @@ _Part of the Interface_:
 ![Screenshot Aplikasi](assets/Bookshelf-app.png)
 
 ![Screenshot Aplikasi](assets/Bookshelf-app_2.png)
-# bookshelf-app
